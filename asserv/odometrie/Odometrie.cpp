@@ -113,7 +113,7 @@ void Odometrie::refresh() {
   deltaTheta = (double)diffCount / (double)distanceRouesUO; // En radian
   
 
-  if ( abs(diffCount) < 1 ) { // On considere le mouvement comme une ligne droite
+  if ( llabs(diffCount) < 1 ) { // On considere le mouvement comme une ligne droite
     // Mise a jour de la position
     x += deltaDist * cos(theta);
     y += deltaDist * sin(theta);
